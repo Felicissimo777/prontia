@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: prontia-db
+    environment:
+      POSTGRES_DB: prontia
+      POSTGRES_USER: prontia
+      POSTGRES_PASSWORD: prontia
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
